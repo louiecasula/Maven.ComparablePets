@@ -1,6 +1,6 @@
 package io.zipcoder;
 
-public class Pet {
+public class Pet implements Comparable<Pet>{
     String name;
     public Pet(){
         this.name = "The Pet With No Name";
@@ -21,5 +21,10 @@ public class Pet {
     @Override
     public String toString() {
         return "Esta mascota se llama " + name;
+    }
+
+    @Override
+    public int compareTo(Pet otherPet) {
+        return getName().compareTo(otherPet.getName());
     }
 }
